@@ -1,0 +1,6 @@
+/* Matugen Generated colors for wlogout */
+@define-color primary {{colors.primary.default.rgb}};
+@define-color surface {{colors.surface.default.rgb}};
+@define-color on-surface {{colors.on_surface.default.rgb}};
+@define-color outline {{colors.outline.default.rgb}};
+@define-color error {{colors.error.default.rgb}};
