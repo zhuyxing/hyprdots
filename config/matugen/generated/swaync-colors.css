@@ -1,0 +1,13 @@
+/* Matugen Generated colors for SwayNC */
+
+/* Main Colors */
+@define-color surface rgb(17, 19, 24);
+@define-color on_surface rgb(225, 226, 233);
+@define-color outline rgb(141, 145, 153);
+@define-color primary rgb(165, 200, 255);
+@define-color on_primary rgb(0, 49, 94);
+
+/* Container Variants (The "Pill" depth) */
+@define-color surface_container rgb(29, 32, 36);
+@define-color surface_container_low rgb(25, 28, 32);
+@define-color surface_container_high rgb(40, 42, 47);

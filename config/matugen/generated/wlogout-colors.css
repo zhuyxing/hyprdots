@@ -1,0 +1,11 @@
+/* Matugen Generated colors for wlogout */
+
+/* Used for your button text and borders */
+@define-color inverse_surface rgb(225, 226, 233);
+
+/* Used for your hover background effect */
+@define-color on_secondary_fixed_variant rgb(61, 71, 88);
+
+/* Optional: Additional colors in case you want to expand later */
+@define-color primary rgb(165, 200, 255);
+@define-color surface rgb(17, 19, 24);

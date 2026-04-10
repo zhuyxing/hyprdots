@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 8,
+    "height": 38,
+    "spacing": 12,
+    "modules-left": [],
+    "modules-center": [
+        "clock",
+        "mpris",
+        "hyprland/workspaces",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery"
+    ],
+    "modules-right": [],
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "mpris": {
+        "format": "󰏤 {artist} - {title}",
+        "format-paused": "󰐊 {artist} - {title}",
+        "max-length": 35
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+		"format": "󰂲",                // ON, but no devices connected
+        "format-connected": "󰂱",      // ON and CONNECTED
+        "format-connected-battery": "󰂱 {device_battery_percentage}%",
+            
+        // THESE THREE together ensure it vanishes when off
+        "format-off": "",             // When powered off via Blueman/rfkill
+        "format-disabled": "",        // When the adapter is disabled
+        "format-disconnected": "󰂲",   // Use this if you want an icon when ON but idle           
+        "signal": 8,
+        "on-click": "blueman-manager",        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm) ",
+        "on-click": "nm-connection-editor"
+    },
+    "battery": {
+        "states": {
+            "critical": 15
+        },
+        "format": "<span size='15360' letter_spacing='5000'>{icon}</span> <span rise='2000' size='10240'>{capacity}%</span>",
+        "format-charging": "<span size='15360' >{icon}</span> <span rise='2000' letter_spacing='5000'>󱐋</span><span rise='2000' size='10240'>{capacity}%</span>", // The "Lightning" bolt icon
+        "format-plugged": "<span letter_spacing='5000'></span> <span rise='2000' size='10240'>{capacity}%</span>",        // When plugged in but not charging
+        "format-alt": "{icon} {time}",          															   // Toggle to show time remaining
+        "format-icons": ["", "", "", "", ""]
+    }
+}
